@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Nike-inspired OKLCH palette — monochrome-dominant with sporty accents */
+    --color-primary: oklch(15% 0.005 0);
+    --color-primary-hover: oklch(25% 0.005 0);
+    --color-primary-container: oklch(96% 0.003 0);
+
+    --color-text-primary: oklch(15% 0.005 0);
+    --color-text-secondary: oklch(48% 0.005 0);
+    --color-text-muted: oklch(55% 0.003 0);
+
+    --color-bg: oklch(100% 0 0);
+    --color-surface: oklch(97% 0.002 0);
+    --color-border: oklch(82% 0.003 0);
+    --color-hairline: oklch(90% 0.002 0);
+
+    --color-success: oklch(52% 0.14 155);
+    --color-warning: oklch(72% 0.16 85);
+    --color-error: oklch(52% 0.22 25);
+    --color-info: oklch(48% 0.18 265);
+
+    --color-accent: oklch(55% 0.16 145);
+    --color-accent-secondary: oklch(48% 0.18 265);
+
+    /* shadcn HSL bridge */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 7%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+    --primary: 0 0% 7%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 7%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 7%;
+    --destructive: 0 84% 52%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 82%;
+    --input: 0 0% 82%;
+    --ring: 0 0% 7%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'DM Sans', sans-serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
